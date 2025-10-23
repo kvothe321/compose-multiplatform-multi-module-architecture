@@ -1,3 +1,4 @@
+import com.tlpcraft.cmp.plugin.config.AndroidBuildConfig
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -65,13 +66,13 @@ kotlin {
 }
 
 android {
-    namespace = "com.tlpcraft.cmp"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    namespace = AndroidBuildConfig.ROOT_NAMESPACE
+    compileSdk = AndroidBuildConfig.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.tlpcraft.cmp"
-        minSdk = libs.versions.android.minSdk.get().toInt()
-        targetSdk = libs.versions.android.targetSdk.get().toInt()
+        applicationId = AndroidBuildConfig.ROOT_NAMESPACE
+        minSdk = AndroidBuildConfig.MIN_SDK
+        targetSdk = AndroidBuildConfig.TARGET_SDK
         versionCode = 1
         versionName = "1.0"
     }
