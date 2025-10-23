@@ -1,39 +1,9 @@
-import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import com.tlpcraft.cmp.plugin.config.AndroidBuildConfig.ROOT_NAMESPACE
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidLibrary)
-}
-
-kotlin {
-    androidTarget {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
-        }
-    }
-
-    listOf(
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
-    }
-
-    jvm()
-
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-        binaries.executable()
-    }
+    id(libs.plugins.tlpcraft.kotlin.multiplatform.library.get().pluginId)
 }
 
 android {
-    namespace = "com.tlpcraft.cmp.core"
-
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    namespace = "$ROOT_NAMESPACE.core"
 }
