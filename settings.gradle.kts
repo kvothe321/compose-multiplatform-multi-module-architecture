@@ -33,3 +33,9 @@ plugins {
 }
 
 include(":composeApp")
+
+include(
+    "core",
+    "core:domain",
+    "core:application"
+)
