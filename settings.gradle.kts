@@ -18,7 +18,6 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
     repositories {
         google {
             mavenContent {
@@ -41,4 +40,14 @@ include(
     "core",
     "core:domain",
     "core:application"
+)
+
+include(
+    "shared:data",
+    "shared:infrastructure",
+    "shared:presentation"
+)
+
+include(
+    "feature"
 )
