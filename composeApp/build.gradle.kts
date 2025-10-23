@@ -45,6 +45,8 @@ kotlin {
             implementation(project(":core"))
             implementation(project(":core:domain"))
             implementation(project(":core:application"))
+            implementation(project(":feature:home"))
+//            implementation(project(":feature:home:core:domain"))
 
             implementation(compose.runtime)
             implementation(compose.foundation)

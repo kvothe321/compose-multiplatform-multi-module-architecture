@@ -7,3 +7,13 @@ plugins {
 android {
     namespace = "$ROOT_NAMESPACE.home"
 }
+
+kotlin {
+    sourceSets {
+        commonMain {
+            dependencies {
+                api(project(":feature:home:presentation"))
+            }
+        }
+    }
+}

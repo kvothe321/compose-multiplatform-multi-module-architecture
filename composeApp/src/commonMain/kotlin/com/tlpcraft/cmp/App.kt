@@ -1,5 +1,6 @@
 package com.tlpcraft.cmp
 
+import com.tlpcraft.cmp.presentation.HomeScreen
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -13,11 +14,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
-
 import cmp_multimodule_architecture.composeapp.generated.resources.Res
 import cmp_multimodule_architecture.composeapp.generated.resources.compose_multiplatform
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
@@ -31,6 +31,7 @@ fun App() {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            HomeScreen()
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
