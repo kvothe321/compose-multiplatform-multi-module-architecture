@@ -5,5 +5,5 @@ plugins {
 }
 
 android {
-    namespace = "$ROOT_NAMESPACE.feature"
+    namespace = "$ROOT_NAMESPACE.home"
 }

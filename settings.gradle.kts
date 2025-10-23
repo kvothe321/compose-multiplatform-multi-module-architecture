@@ -49,5 +49,10 @@ include(
 )
 
 include(
-    "feature"
+    "feature",
+    "feature:home",
+    "feature:home:core:application",
+    "feature:home:core:domain",
+    "feature:home:data",
+    "feature:home:presentation",
 )

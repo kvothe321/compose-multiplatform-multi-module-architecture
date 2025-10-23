@@ -66,11 +66,11 @@ kotlin {
 }
 
 android {
-    namespace = AndroidBuildConfig.ROOT_NAMESPACE
+    namespace = AndroidBuildConfig.ModuleNamespace.ROOT_NAMESPACE
     compileSdk = AndroidBuildConfig.COMPILE_SDK
 
     defaultConfig {
-        applicationId = AndroidBuildConfig.ROOT_NAMESPACE
+        applicationId = AndroidBuildConfig.ModuleNamespace.ROOT_NAMESPACE
         minSdk = AndroidBuildConfig.MIN_SDK
         targetSdk = AndroidBuildConfig.TARGET_SDK
         versionCode = 1
