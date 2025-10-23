@@ -1,9 +1,8 @@
-rootProject.name = "CMP-Multimodule-Architecture"
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+@file:Suppress("UnstableApiUsage")
+
+rootProject.name = "build-logic"
 
 pluginManagement {
-    includeBuild("build-logic")
-
     repositories {
         google {
             mavenContent {
@@ -18,6 +17,7 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
     repositories {
         google {
             mavenContent {
@@ -30,24 +30,4 @@ dependencyResolutionManagement {
     }
 }
 
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
-}
-
-include(":composeApp")
-
-include(
-    "core",
-    "core:domain",
-    "core:application"
-)
-
-include(
-    "shared:data",
-    "shared:infrastructure",
-    "shared:presentation"
-)
-
-include(
-    "feature"
-)
+include("convention")

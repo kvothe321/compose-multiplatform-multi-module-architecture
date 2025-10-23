@@ -14,6 +14,7 @@ composeMultiplatform = "1.8.2"
 junit = "4.13.2"
 kotlin = "2.2.10"
 kotlinx-coroutines = "1.10.2"
+tlpcraft-conventions = "0.0.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -35,3 +36,6 @@ composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "com
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+# Plugins defined by the included build-logic
+tlpcraft-kotlin-multiplatform-library = { id = "com.tlpcraft.cmp.plugin.convention.kotlin.multiplatform.library", version = "unspecified" }
