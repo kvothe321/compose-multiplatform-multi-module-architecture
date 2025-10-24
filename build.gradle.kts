@@ -10,4 +10,5 @@ plugins {
 
     // Build-logic defined plugins
     alias(libs.plugins.tlpcraft.kotlin.multiplatform.library) apply false
+    alias(libs.plugins.tlpcraft.compose.multiplatform.library) apply false
 }

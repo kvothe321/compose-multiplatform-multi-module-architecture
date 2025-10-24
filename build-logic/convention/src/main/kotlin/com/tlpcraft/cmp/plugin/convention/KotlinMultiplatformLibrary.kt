@@ -2,7 +2,7 @@ package com.tlpcraft.cmp.plugin.convention
 
 import com.android.build.api.dsl.LibraryExtension
 import com.tlpcraft.cmp.plugin.config.AndroidBuildConfig.COMPILE_SDK
-import com.tlpcraft.cmp.plugin.config.AndroidBuildConfig.ROOT_NAMESPACE
+import com.tlpcraft.cmp.plugin.config.AndroidBuildConfig.ModuleNamespace.ROOT_NAMESPACE
 import com.tlpcraft.cmp.plugin.shared.PluginDefinitions.ANDROID_LIBRARY
 import com.tlpcraft.cmp.plugin.shared.PluginDefinitions.KOTLIN_MULTIPLATFORM
 import com.tlpcraft.cmp.plugin.shared.applyPlugins
